@@ -1,0 +1,40 @@
+body{
+	background-color: pink;
+}
+#nav {
+	list-style-type: none;
+    overflow: hidden;
+    background-color: #333;
+	font-family: "Calibri";
+	font-size: 30px;
+	filter: glow(color=red,strength=3);
+	text-shadow: red 0 0 10px;
+	position: fixed;
+	top:0px;
+	width: 100%;
+
+}
+/* CSS for Navigator menu*/ /**/
+#nav a {
+    float: center;
+    color: white;
+    padding: 30px 30px;
+    text-decoration: none;
+
+}
+#nav a.active {
+    background-color: pink;
+    color: white;
+	text-decoration: underline;
+}
+#nav a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+#Subject {
+	font-size: 20px;
+	font-family: "Kabel";
+	filter: glow(color=red,strength=3);
+	text-shadow: red 0 0 10px;
+	padding-top: 5vh;
+}
