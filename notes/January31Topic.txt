@@ -1,0 +1,47 @@
+HYPERTEXT TRANSFER PROTOCOL (HTTP)
+ -Application Layer communications protocol
+   *invented by Tim Berners-Lee
+   *jointly developed by the W3C (World Wide Web Consortium) and IETF (Internet Engineering Task Force)
+   -Version History 
+	~HTTP 0.9 (1991) -connection, request, response, disconnection
+	~HTTP 1.0 (RFC 1945, May 1996)
+	~HTTP 1.1 (RFC 2068, Jan 1997, RFC 2616. Jun 1999),
+                    -messaging, syntax and routing
+		  (RFC 7230-7235, Jun 2014)
+                    _ authentication
+	~HTTP 2 (RFC 7540, May 2015)
+		--google's SPDY (speedy)
+
+HTTP Fundamentals
+  - runs on top of TCP(Transmission Control Protocol)/IP (Internet Protocol), using TCP port 80 by default,
+or TCP port 443 for HTTPS (HTTP over SSL(Secure Sockets Layer)/TLS(Transport Layer Security) OR HTTP Secure).
+  - HTTP is based on a client-server architecture
+	*clients, A.K.A User Agents (UA)
+		-Web browsers (most common user agent)
+		-web crawlers/spiders (programs that fetch and parse related keywords and get their link/s)
+			-e.g. Search engines like Google's Search
+		-other end-user tools and applications
+ IANA (Internet Assigned Numbers Authority),  ICANN (Internet Corporation for Assigned Names and Numbers)
+
+HTTPS-puts encryption
+   	+servers
+	  -origin servers
+	  -proxy servers, gateways and tunnels
+
+HTTP uses a request-response standard protocol
+	  -the client sends a HTTP request message to the server
+	  -the server processes the request and replies with a HTTP response message
+	e.g. 10.10.22.254 - SLU's proxy server that allows authentication
+	     HTTP 2 - push capability feature
+	     lower than HTTP 2 version - pull capability "polling" refresh a page in a certain time through a script.
+
+HTTP is a stateless communications protocol
+	-servers do not keep information about clients in-between requests
+
+HTTP provides support for other functionalties, such as:
+	-cache control
+	-content media type Multipurpose Internet Mail Extension (MIME) specification
+	-language and character set specification
+	-content/transfer codings
+	-content negotiation
+	-client-server protocol negotiations
