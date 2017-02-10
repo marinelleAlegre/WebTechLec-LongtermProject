@@ -45,12 +45,6 @@ HTTP provides support for other functionalties, such as:
 	-content/transfer codings
 	-content negotiation
 	-client-server protocol negotiations
-	-cache control
-	-content media type(MIME) specification
-	-language and character set specification
-	-content/transfer coding
-	-client server protocol negotions
-	-content negotion
 	-persistent connections
 	-request pipelining - send in sequence
 	-authentication/authorization
@@ -88,7 +82,7 @@ HTTP Request Message
 HTTP Status Code:
 	-Informational(1xx)
 	-Success(2xx)
-	-Redirection(3xx)
+	-Redirection(3xx) 
 	-Client error(4xx)
 	-Server error(5xx)
 Standard Methods
