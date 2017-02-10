@@ -45,13 +45,7 @@ HTTP provides support for other functionalties, such as:
 	-content/transfer codings
 	-content negotiation
 	-client-server protocol negotiations
-	-cache control
-	content media type(MIME) specification
-	-language and character set specification
-	-content/transfer coding
-	-client server protocol negotions
-	-content negotion
-	-persistent connections
+	-persistent connections*
 	-request pipelining - send in sequence
 	-authentication/authorization
 	-etc.
