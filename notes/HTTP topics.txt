@@ -1,0 +1,155 @@
+--*STANDARD METHODS*--
+ -GET
+ -HEAD
+ -POST
+ -PUT
+ -DELETE
+ -OPTIONS
+ -TRACE
+ -CONNECT
+ 
+--*EXTENSION METHODS*--
+ -PROPFIND
+ -PROPPATCH
+ -MKCOL
+ -COPY
+ -MOVE
+ -LOCK
+ -UNLOCK
+ -DESTINATION
+
+--*HTTP Response Message*--
+ -Status Line
+	-HTTP Protocol Version
+	-Status Code
+	-Reason Phrase
+ -Message Headers(general,response...)
+ -Empty Line
+ -Message Body(optional)
+ 
+--*HTTP Request Method*--
+ -GET
+	-transfer a current selected representation of the resource indentified by the request URI
+	-most commonly used in HTTP method
+ -HEAD
+	-same as GET ,except that the entity(body) is not included
+	-used to retrieve mnetadata abou the entity implied by the request without transferring the entity itself
+ -POST
+	-submit data to servers
+	-perform resource-specific processing of the entities enclosed in the message body
+	-typically used in submitting HTML form data
+ -PUT
+	-allows us to upload data in server under the URI
+ -DELETE
+	-remove data in the server
+	-by DEFAULT; PUT&DELETE are not allowed in apache server
+	
+ -OPTIONS
+	-querying the server
+	-use to see other option that can perform in the server
+ -TRACE
+	-use to request a loop-back
+	-use for testing/diagnostic of the request/response chain
+ -CONNECT
+	-use only for HTTPS connection
+	-request the establishment of a tunnel to the destination origin server
+	
+--*METHODS*--
+	*SAFE METHOD - GET,HEAD,OPTION,TRACE
+	*IDEMPOTENT - GET,HEAD,OPTION,TRACE,PUT,DELETE
+	*CACHEABLE - 
+	
+--*HTTP Message Headers*--
+ -General Header Fields
+	-Cache-Control
+	-Connection
+	-Date
+	-Pragma
+	-Trailer
+	-Transfer-Encoding
+	-Upgarde
+	-Via
+	-Warning
+ 
+ -Request Header Fields
+	-Accept
+	-Accept-Charset
+	-Accept-Encoding
+	-Accept-Language
+	-Authorization
+	-Expect
+	-From
+	-Host
+	-if-matched
+	-if-modified
+	-if-Modified-Since
+	-Range
+	-Referer
+	-TE
+	-if-none-matched
+	-user-Agent
+	-Host
+	-Max-Forwards
+	-Proxy Authorization
+	
+	--*STATUS CODES*--
+	*1xx Informational
+	-100 Continue
+	-101 Switching Protocols
+	-102 Processing
+	
+	*2xx Success
+	-200 OK
+	-201 Created
+	-202 Accepted
+	-203 Non-Authoritative Information
+	-204 No Content
+	-205 Reset Content
+	-206 Partial Content
+	
+	*3xx Redirection
+	-300 Multiple Choices
+	-301 Moved Permanently
+	-302 Found
+	-303 See Other
+	-304 Not Modified
+	-305 Use Proxy
+	-306 (Unused)
+	-307 Temporary Redirect
+	-308 Permanent Redirect
+	
+	*4xx Client Error
+	-400 Bad Request
+	-401 Unauthorized
+	-402 Payment Required
+	-403 Forbidden
+	-404 Not Found
+	-405 Method Not Allowed
+	-406 Not Acceptable
+	-407 Proxy Authentication Required
+	-408 Request Timeout
+	-409 Conflict
+	-410 Gone
+	-411 Length Required
+	-412 Precondition Failed
+	-413 Request Entity Too Large
+	-414 Request-URI Too Long
+	-415 Unsupported Media Type
+	-416 Requested Range Not Satisfiable
+	-417 Expectation Failed
+	-421 Misdirected Request
+	-428 Precondition Required
+	-429 Too Many Requests
+	-431 Request Header Fields Too Large
+	-451 Unavailable For Legal Reasons
+
+	*5xx Server Error
+	-500 Internal Server Error
+	-501 Not Implemented
+	-502 Bad Gateway
+	-503 Service Unavailable
+	-504 Gateway Timeout
+	-505 HTTP Version Not Supported
+	-511 Network Authentication Required
+	-598 Network read timeout error
+	-599 Network connect timeout error
