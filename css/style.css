@@ -1,5 +1,5 @@
 body{
-	background-color: pink;
+	background-color: #becde5;
 }
 #nav {
 	list-style-type: none;
@@ -33,38 +33,70 @@ body{
 }
 #HOME {
 	font-size: 50px;
-	font-family: "Kabel";
+	font-family: "Century Gothic";
+	text-align: center;
 	filter: glow(color=red,strength=3);
 	text-shadow: red 0 0 10px;
 	padding-top: 5vh;
+}
+#webtek{
+	font-family: "Calibri";
+	font-size: 30px;
+}
+#webtekdescription{
+	font-family: "Calibri";
+	font-size: 25px;
+	margin-top: 5px;
+	margin-bottom: 30px;
+	margin-left: 50px;
+	margin-right: 50px;
+	text-align: justify;
+}
+#timeline{
+	text-align: center;
+	font-family: "Calibri"
+}
+b{
+	font-size: 20px;
+}
+#year{
+	font-family: "Calibri";
+	font-size: 18px;
+	margin-left: 50px;
+	margin-right: 50px;
+	text-align: justify;
 }
 #LECTURE {
 	font-size: 50px;
-	font-family: "Kabel";
+	font-family: "Century Gothic";
 	filter: glow(color=red,strength=3);
 	text-shadow: red 0 0 10px;
 	padding-top: 5vh;
+	text-align: center;
 }
-#TERMS {
+#GLOSSARY {
 	font-size: 50px;
-	font-family: "Kabel";
+	font-family: "Century Gothic";
 	filter: glow(color=red,strength=3);
 	text-shadow: red 0 0 10px;
 	padding-top: 5vh;
+	text-align: center;
 }
 #REFERENCES {
 	font-size: 50px;
-	font-family: "Kabel";
+	font-family: "Century Gothic";
 	filter: glow(color=red,strength=3);
 	text-shadow: red 0 0 10px;
 	padding-top: 5vh;
+	text-align: center;
 }
 #CONTACT {
 	font-size: 50px;
-	font-family: "Kabel";
+	font-family: "Century Gothic";
 	filter: glow(color=red,strength=3);
 	text-shadow: red 0 0 10px;
 	padding-top: 5vh;
+	text-align: center;
 }
 #feedback-page{
 	text-align:center;
