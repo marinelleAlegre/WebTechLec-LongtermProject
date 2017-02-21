@@ -1,0 +1,185 @@
+January 31 ========================================================================================================================================
+
+HYPERTEXT TRANSFER PROTOCOL (HTTP)
+ -Application Layer communications protocol
+   *invented by Tim Berners-Lee
+   *jointly developed by the W3C (World Wide Web Consortium) and IETF (Internet Engineering Task Force)
+   -Version History 
+	~HTTP 0.9 (1991) -connection, request, response, disconnection
+	~HTTP 1.0 (RFC 1945, May 1996)
+	~HTTP 1.1 (RFC 2068, Jan 1997, RFC 2616. Jun 1999),
+                    -messaging, syntax and routing
+		  (RFC 7230-7235, Jun 2014)
+                    _ authentication
+	~HTTP 2 (RFC 7540, May 2015)
+		--google's SPDY (speedy)
+
+HTTP Fundamentals
+  - runs on top of TCP(Transmission Control Protocol)/IP (Internet Protocol), using TCP port 80 by default,
+or TCP port 443 for HTTPS (HTTP over SSL(Secure Sockets Layer)/TLS(Transport Layer Security) OR HTTP Secure).
+  - HTTP is based on a client-server architecture
+	*clients, A.K.A User Agents (UA)
+		-Web browsers (most common user agent)
+		-web crawlers/spiders (programs that fetch and parse related keywords and get their link/s)
+			-e.g. Search engines like Google's Search
+		-other end-user tools and applications
+ IANA (Internet Assigned Numbers Authority),  ICANN (Internet Corporation for Assigned Names and Numbers)
+
+HTTPS-puts encryption
+   	+servers
+	  -origin servers
+	  -proxy servers, gateways and tunnels
+
+HTTP uses a request-response standard protocol
+	  -the client sends a HTTP request message to the server
+	  -the server processes the request and replies with a HTTP response message
+	e.g. 10.10.22.254 - SLU's proxy server that allows authentication
+	     HTTP 2 - push capability feature
+	     lower than HTTP 2 version - pull capability "polling" refresh a page in a certain time through a script.
+
+HTTP is a stateless communications protocol
+	-servers do not keep information about clients in-between requests
+
+HTTP provides support for other functionalties, such as:
+	-cache control
+	-content media type Multipurpose Internet Mail Extension (MIME) specification
+	-language and character set specification
+	-content/transfer codings
+	-content negotiation
+		--can upgrade or downgrade depending on client's request (HTTPs 0.9, 1.0, 1.1 (more common protocol) and 2)
+	-client-server protocol negotiations
+	-persistent connections
+
+	*content media type, language and character set specification, content/transfer codings
+		-- the server can send a zip content
+	
+
+Febraury 3 ===========================================================================================================================
+
+HTTP RESOURCE ADDRESSING
+	-HTTP resources are identified by URI's ((Uniform Resource Identifier) RFC 3986), or more specifically, HTTP
+		--SCHEME (HTTP or HTTPS)
+		--AUTHORITY
+			---user information or authentication credentials (deprecated)
+
+		e.g. http://usr:pwd@server.org:81/info/profile.php?id=1234#addr
+			@ - separates the site and the user
+			/info/profile - path
+			.php - resource
+			?id=1234#addr - query OR id = 1234 & color = red & ....
+			addr - bookmark/fragment identifier
+		--HOST
+		--DOMAIN NAME (resolved to an IP address using DNS) of the server where the resource resides (or will be created)
+		--PORT NUMBER
+ 		--PATH TO RESOURCE (resolved relative to the document root on the server)
+			---may refer to a static or dynamic resource
+		--QUERY
+			---typically provided as  key= value pairs, with ampersand (&) separators between key/value pairs.
+		--FRAGMENT IDENTIFIER
+
+			**relative --> /info/profile
+			**absolute --> http://google.com
+
+HTTP REQUEST MESSAGING
+	-REQUEST LINE (1st Line) - (CRLF (Carriage Return Line Feed) terminated line cosisting of three space-separated values)
+		--METHOD
+		--REQUEST URI
+		--HTTP PROTOCOL VERSION
+	-MESSAGE HEADERS (general, request, and/or entity headers)
+		--HTTP 1.1 Requires at least the host request header to be provided
+		--EMPTY LINE (CRLF) - indicates that the request ended
+		--MESSAGE BODY a.k.a. PAYLOAD (optional)
+HTTP REPONSE MESSAGE
+	-STATUS LINE (1st Line -CRLF)
+		--HTTP PROTOCOL VERSION
+		--STATUS CODE	
+		--REASON PHRASE
+	-MESSAGE HEADERS (general, purpose, response, and/or entity headers)
+		--INFORMATIONAL (1XX)
+		--SUCCESS       (2XX)
+		--REDIRECTIONAL (3XX)
+		--CLIENT ERROR  (4XX)
+		--SERVER ERROR  (5XX)
+	-EMPTY LINE 
+	-MESSAGE BODY
+
+
+			**STANDARD METHODS:
+	  			-GET
+	    			  -->fetch resource
+	  			-HEAD
+			          --> same as GET  --> body will not be included  --> retrieve METEDATA
+	  			-POST
+	    			  --> submits data to server
+	  			-PUT (not allowed by default in Apache)
+	    			  --> stores data to the request URI
+	  			-DELETE (not allowed by default in Apache)
+	    			  --> opposite of put method	
+	  			-OPTIONS
+            			  --> querying the server
+	  			-TRACE
+	    			  --> request in lookback --> request ay bumalik  --> test/diagnosticof request/response chain
+	  			-CONNECT
+	    			  --> HTTPS communicating --> tunnel
+					***PUT, DELETE, POST ***
+					      -not safe-
+		DAV (Distributed Authoring Versioning)
+	-EXTENSION METHODS
+		--e.g. WebDav (RFC 4918)
+			---PROPFIND, PROPPATH, MKCOL, COPY, MOVE, LOCK, UNLOKCK
+		--SAFE METHODS, IDEMPOTENT METHODS, CACHEABLE METHODS
+			--- General Header Fields -->> Client and Server
+			--- Request Header Fields -->Client
+			--- Response Header Fields --> Server
+			--- Entity Header Fields
+
+
+FEBRUARY 21 ====================================================================================================================
+	
+	-REPONSE HEADER FIELDS
+		>ACCEPT		>LOCATION		>VARY
+		>RANGES		>PROXY-AUTHENTICATE	>WWW-AUTHENTICATION
+		>AGE		>RETRY-AFTER
+		>ETAG		>SERVER
+	-ENTITY HEADER FIELDS
+		>ALLOW			>CONTENT-LOCATION	>CONTENT-TYPE
+		>CONTENT-ENCODING	>CONTENT-MD5		>EXPIRES
+		>CONTENT-LANGUAGE	>CONTENT-RANGE		>LAST-MODIFIED
+		>CONTENT-LENGTH 	
+
+HTTP STATUS CODES
+	*INFORMATIONAL (1XX)
+		>100 - CONTINUE
+		>101 - SWITCHING PROTOCOL
+	
+	*SUCCESS (2XX)
+		>200 - OK	>204 - NO CONTENT
+		>201 - CREATED	>205 - RESET CONTENT
+		>202 - ACCEPTED >206 - PARTIAL CONTENT
+		>203 - NON AUTHORATIVE INFORMATION
+	
+	*REDIRECTION (3XX)
+		>300 - MULTIPLE CHOICES		>304 - NOT MODIFIED
+		>301 - MOVED PERMANENTLY	>305 - USE PROXY
+		>302 - FOUND			>306 - (UNUSED) --> available on http 1.0
+		>303 - SEE OTHER		>307 - TEMPORARY REDIRECT
+	
+	*CLIENT ERROR (4XX)
+		>400 - BAD REQUEST			>410 - GONE
+		>401 - UNAUTHORIZED			>411 - LENGTH REQUIRED
+		>402 - PAYMENT REQUIRED			>412 - PRECONDITION FAILED
+		>403 - FORBIDDEN			>413 - REQUEST ENTITY TOO LARGE
+		>404 - NOT FOUND 			>414 - REQUEST URI TOO LARGE
+		>405 - METHOD NOT ALLOWED		>415 - UNSUPPORTED MEDIA TYPE
+		>406 - NOT ACCEPTABLE			>416 - REQUESTED RANGE NOT SATISFIABLE
+		>407 - PROXY AUTHENTICATION REQUIRED	>417 - EXPECTATION FAILED
+		>408 - REQUEST TIME-OUT			>426 - UPGRADE REQUIRED
+		>409 - CONFLICT
+
+	*SERVER ERROR (5XX)
+		>500 - INTERNAL		>503 - SERVICE UNAVAILABLE
+		>501 - NOT IMPLEMENTED  >504 - GATEWAY TIMEOUT (site is busy)
+		>502 - BAD GATEWAY	>505 - HTTP VERSION NOT SUPPORTED
+
+	******padagdag na lang po kung may kulang. thanks!! ********
+	
