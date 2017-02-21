@@ -1,4 +1,4 @@
-January 31
+January 31 ========================================================================================================================================
 
 HYPERTEXT TRANSFER PROTOCOL (HTTP)
  -Application Layer communications protocol
@@ -54,7 +54,7 @@ HTTP provides support for other functionalties, such as:
 		-- the server can send a zip content
 	
 
-Febraury 3
+Febraury 3 ===========================================================================================================================
 
 HTTP RESOURCE ADDRESSING
 	-HTTP resources are identified by URI's ((Uniform Resource Identifier) RFC 3986), or more specifically, HTTP
@@ -133,5 +133,53 @@ HTTP REPONSE MESSAGE
 			--- Response Header Fields --> Server
 			--- Entity Header Fields
 
-		******di ko na po mahanap ung pinagsulatan ko na notes ko after this lesson po pakidagdag na lang po thanks!! ********
+
+FEBRUARY 21 ====================================================================================================================
+	
+	-REPONSE HEADER FIELDS
+		>ACCEPT		>LOCATION		>VARY
+		>RANGES		>PROXY-AUTHENTICATE	>WWW-AUTHENTICATION
+		>AGE		>RETRY-AFTER
+		>ETAG		>SERVER
+	-ENTITY HEADER FIELDS
+		>ALLOW			>CONTENT-LOCATION	>CONTENT-TYPE
+		>CONTENT-ENCODING	>CONTENT-MD5		>EXPIRES
+		>CONTENT-LANGUAGE	>CONTENT-RANGE		>LAST-MODIFIED
+		>CONTENT-LENGTH 	
+
+HTTP STATUS CODES
+	*INFORMATIONAL (1XX)
+		>100 - CONTINUE
+		>101 - SWITCHING PROTOCOL
+	
+	*SUCCESS (2XX)
+		>200 - OK	>204 - NO CONTENT
+		>201 - CREATED	>205 - RESET CONTENT
+		>202 - ACCEPTED >206 - PARTIAL CONTENT
+		>203 - NON AUTHORATIVE INFORMATION
+	
+	*REDIRECTION (3XX)
+		>300 - MULTIPLE CHOICES		>304 - NOT MODIFIED
+		>301 - MOVED PERMANENTLY	>305 - USE PROXY
+		>302 - FOUND			>306 - (UNUSED) --> available on http 1.0
+		>303 - SEE OTHER		>307 - TEMPORARY REDIRECT
+	
+	*CLIENT ERROR (4XX)
+		>400 - BAD REQUEST			>410 - GONE
+		>401 - UNAUTHORIZED			>411 - LENGTH REQUIRED
+		>402 - PAYMENT REQUIRED			>412 - PRECONDITION FAILED
+		>403 - FORBIDDEN			>413 - REQUEST ENTITY TOO LARGE
+		>404 - NOT FOUND 			>414 - REQUEST URI TOO LARGE
+		>405 - METHOD NOT ALLOWED		>415 - UNSUPPORTED MEDIA TYPE
+		>406 - NOT ACCEPTABLE			>416 - REQUESTED RANGE NOT SATISFIABLE
+		>407 - PROXY AUTHENTICATION REQUIRED	>417 - EXPECTATION FAILED
+		>408 - REQUEST TIME-OUT			>426 - UPGRADE REQUIRED
+		>409 - CONFLICT
+
+	*SERVER ERROR (5XX)
+		>500 - INTERNAL		>503 - SERVICE UNAVAILABLE
+		>501 - NOT IMPLEMENTED  >504 - GATEWAY TIMEOUT (site is busy)
+		>502 - BAD GATEWAY	>505 - HTTP VERSION NOT SUPPORTED
+
+	******padagdag na lang po kung may kulang. thanks!! ********
 	
