@@ -195,6 +195,20 @@
 		
 				When these failures occur, the protocol captures the cause of the failure (if possible) and reports an error code back to the browser. Error 404 ("Page not found"), for example, became famous in the early days of the Internet when issues with Web pages and navigation were more common.
 			</div>
+			</br>
+			<div id = "messageheaders">
+			<b>General Header Fields</b></br>
+				<b>Cache-Control</b> - used to specify directives for caching mechanisms in both, requests and responses. Caching directives are unidirectional, meaning that a given directive in a request is not implying that the same directive is to be given in the response.</br>
+				<b>Connection</b> - The Connection general header controls whether or not the network connection stays open after the current transaction finishes. If the value sent is keep-alive, the connection is persistent and not closed, allowing for subsequent requests to the same server to be done.</br>
+				<b>Date</b> - The date and time that the message was originated (in "HTTP-date" format as defined by RFC 7231 Date/Time Formats).</br>
+				<b>Pragma</b> - Implementation-specific fields that may have various effects anywhere along the request-response chain.</br>
+				<b>Trailer</b> - The Trailer response header allows the sender to include additional fields at the end of chunked messages in order to supply metadata that might be dynamically generated while the message body is sent, such as a message integrity check, digital signature, or post-processing status.</br>
+				<b>Transfer-Encoding</b> - Transfer-Encoding is a hop-by-hop header, that is applying to a message between two nodes, not to a resource itself. Each segment of a multi-node connection can use different Transfer-Encoding values. If you want to compress data over the whole connection, use the end-to-end header Content-Encoding header instead.</br>
+				<b>Upgrade</b> - Ask the server to upgrade to another protocol.</br>
+				<b>Via</b> - Informs the server of proxies through which the request was sent.</br>
+				<b>Warning</b> - A general warning about possible problems with the entity body.</br>
+			</div>
+
 			</p>
 		</div>
 
