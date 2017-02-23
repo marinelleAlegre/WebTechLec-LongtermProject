@@ -1,5 +1,4 @@
-<!DOCTYPE HTML>
-<!---------------------LECTURE------------------------------>	
+<!DOCTYPE HTML>	
 <html>
 
 <Link rel ="stylesheet" href="css/style.css"/>
@@ -30,6 +29,7 @@
 <div id = "#notes1">
 	<p id = "webtekdescription">Accoring to the University of the West Indies, this course covers the design, implementation and testing of web-based applications and social software, and the incorporation of a variety of digital media into these applications. Students are exposed to a range of web technologies, both client-side and server-side.</p>
 	<h2 id = "timeline">Internet History Timeline: ARPANET to the World Wide Web By Kim Ann Zimmermann, Live Science Contributor:</h2>
+	<div id = "history">
 	<p id ="year">The precursor to the Internet was jumpstarted in the early days of computing history, in 1969 with the U.S. Defense Department's Advanced Research Projects Agency Network (ARPANET). ARPA-funded researchers developed many of the protocols used for Internet communication today. </br>This timeline offers a brief history of the Internet’s evolution:</br>
 	</br><b>1934:</b> Belgian information expert named Paul Otlet imagined a “Radiated Library” that would use technology of the day — the telephone and radio — to create something very much like the Internet.</br>
 	
@@ -105,5 +105,76 @@
 
 	</br><b>2011:</b> Twitter and Facebook play a large role in the Middle East revolts.</p>
 </div>
+</div>
+
+	<div id = "www"><h2>The WORLD WIDE WEB (WWW)</h2>
+		<p id = "origination">
+		The WWW is just one of many applications of the Internet and computer networks.It is based on these three core technologies:
+		</br></br>
+		<b>HTML</b> - Hypertext Markup Language</b>. HTML originally supported only text documents, but with enhancements during the 1990s grew capable of handling frames,style sheets and plugins for general purpose Web site content publishing.
+		</br></br>
+		<b>HTTP - Hypertext Transfer Protocol</b>.  HTTP finally made it to version 2.0 after 20 years, indicative of how well the protocol accommodated the Web's growth.
+		</br></br>
+		<b>Web servers and Web browsers</b>. The original Netscape has given way to many other browser applications, but the same concepts of client-server communication still apply.
+		</br></br>
+		Although some people use the two terms interchangeably, the Web is built on top of the Internet and is not the Internet itself. Examples of popular applications of the Internet separate from the Web include</p>
+
+		<h2 id = "tim">Who is Tim-Berners Lee</h2>
+		<p id = "timbiography">Tim Berners-Lee invented the World Wide Web in 1989. He founded and Directs the World Wide Consortium (W3C) the forum for technical development of the Web. He founded the Web Foundation whose mission is that the WWW serves Humanity, and co-founded the Open Data Institute in London. His research group at MIT's Computer Science and AI Lab ("CSAIL") plans to re-decentralize the Web. Tim spends a lot of time fighting for rights such as privacy, freedom and openness of the Web.
+		</br></br>
+		A graduate of Oxford University, Tim Berners-Lee invented the Web while at CERN, the European Particle Physics Laboratory, in 1989. He wrote the first web client and server in 1990. His specifications of URIs, HTTP and HTML were refined as Web technology spread.
+		</br></br>
+		He is the 3Com Founders Professor of Engineering in the School of Engineering with a joint appointment in the Department of Electrical Engineering and Computer Science at the Laboratory for Computer Science and Artificial Intelligence ( CSAIL) at the Massachusetts Institute of Technology (MIT) where he also heads the Decentralized Information Group (DIG). He is also a Professor in the Electronics and Computer Science Department at the University of Southampton, UK.<a href = "file:///C:/Users/Franchesca/Desktop/WebTechLec-LongtermProject/prelims.html">  Read more..</a></p>
+		</p>
+
+		<div id = "http"><h2>Hyper Text Transfer Protocol <b>by Bradley Mitchell</b></h2>
+			<p id = "hypertext">
+
+				<b>HTTP (Hypertext Transfer Protocol)</b> provides a network protocol standard that Web browsers and servers use to communicate.
+				</br></br><b>History of HTTP</b></br>
+				Tim Berners-Lee created the initial HTTP in the early 1990s as part of his work in defining the original World Wide Web.  Three primary versions were widely deployed during the 1990s
+				</br></br><b>
+				HTTP 0.9</b> (for support of basic hypertext documents)
+				</br></br><b>
+				HTTP 1.0</b> (extensions to support rich Web sites and scalability)
+				</br></br><b>
+				HTTP 1.1</b> (developed to address performance limitations of HTTP 1.0, specified in Internet RFC 2068)
+				</br></br>
+				The latest version - <b>HTTP 2.0</b> - became an approved standard in 2015. It maintains backward compatibility with HTTP 1.1 but offers additional performance enhancements.
+				</br></br>
+				While standard <a href = "https://www.lifewire.com/what-is-https-817971">HTTP</a> does not encrypt traffic sent over a network, the HTTPS standard was developed to add encryption to HTTP via the use of (orignially) <a href = "https://www.lifewire.com/secure-sockets-layer-816471">Secure Sockets Layer (SSL)</a> or (later) Transport Layer Security (TLS).
+
+				</br></br><b>How does HTTP works?</b></br>
+				HTTP is an application layer protocol built on top of TCP that uses a client-server communication model. HTTP clients (such as Web browsers) and Web servers communicate via HTTP request and response messages. The three main HTTP message types are GET, POST, and HEAD.
+				</br></br>
+				<b>HTTP GET</b> messages sent to a Web server contain only a URL. Zero or more optional data parameters may be appended to the end of the URL.
+				</br></br>	
+				The HTTP server processes the optional data portion of the URL if present and returns the result (a Web page or element of a Web page) to the browser.
+				</br></br>	
+				<b>HTTP POST</b> messages place any optional data parameters in the body of the request message rather than adding them to the end of the URL.
+				</br></br>
+				<b>HTTP HEAD</b> request work the same as GET requests.
+				</br></br>
+				Instead of replying with the full contents of the URL, the Web server sends back only the Web page header information (contained inside the HTML <HEAD> section).
+				</br></br>
+				The browser initiates communication with an HTTP server by initiating a TCP connection to the server. Web browsing sessions use server port 80 by default although other ports such as 8080 are sometimes used instead.
+				</br></br>
+				Once a session is established, users of Web browsers trigger the sending and receiving of HTTP messages by visiting Web pages that have HTTP (or HTTPS) URLs.
+				</br></br><b>
+				Issues with HTTP</b></br>
+				Messages transmitted over HTTP can fail to be delivered successfully for several reasons:
+				</br></br>
+				user error</br></br>
+				malfunction of the Web browser</br></br>
+				malfunction of  the Web server</br></br>
+				errors in creation of Web pages</br></br>
+				temporary Internet network glitches</br></br>
+		
+				When these failures occur, the protocol captures the cause of the failure (if possible) and reports an error code back to the browser. Error 404 ("Page not found"), for example, became famous in the early days of the Internet when issues with Web pages and navigation were more common.
+			</p>
+		</div>
+
+	</div>
+
 </body>
 </html>
