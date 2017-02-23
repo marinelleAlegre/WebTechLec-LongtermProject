@@ -230,3 +230,22 @@ textarea {
 	padding-bottom:22px;
 	font-weight:700;
 }
+#references{
+	text-align: center;
+	font-family: "Calibri";
+	font-size: 	30px;
+}
+h2{
+	margin-left: 50px;
+	font-family: "Calibri";
+	font-size: 30px;
+}
+h3{
+	font-size: 30px;
+}
+p{
+	font-size: 20px;
+	font-family: "Calibri";
+	margin-left: 50px;
+	margin-right: 50px;
+}
