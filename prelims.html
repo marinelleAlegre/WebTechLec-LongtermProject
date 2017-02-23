@@ -155,7 +155,15 @@
 				</br></br>
 				<b>HTTP HEAD</b> request work the same as GET requests.
 				</br></br>
-				Instead of replying with the full contents of the URL, the Web server sends back only the Web page header information (contained inside the HTML <HEAD> section).
+				<div id = "methodshttp">
+				Some standard methods of HTTP also includes: <b>PUT, DELETE, OPTIONS, TRACE, CONNECT</b></br></br>
+				<b>PUT</b> - The PUT method requests that the enclosed entity be stored under the supplied Request-URI.</br>
+				<b>DELETE</b> - The DELETE method requests that the origin server delete the resource identified by the Request-URI. This method MAY be overridden by human intervention (or other means) on the origin server. The client cannot be guaranteed that the operation has been carried out, even if the status code returned from the origin server indicates that the action has been completed successfully. However, the server SHOULD NOT indicate success unless, at the time the response is given, it intends to delete the resource or move it to an inaccessible location.</br>
+				<b>OPTIONS</b> - The OPTIONS method represents a request for information about the communication options available on the request/response chain identified by the Request-URI. This method allows the client to determine the options and/or requirements associated with a resource, or the capabilities of a server, without implying a resource action or initiating a resource retrieval.</br>
+				<b>TRACE</b> - The TRACE method is used to invoke a remote, application-layer loop- back of the request message.</br>
+				<b>CONNECT</b> - This specification reserves the method name CONNECT for use with a proxy that can dynamically switch to being a tunnel.</br>
+				</div>
+				</br>Instead of replying with the full contents of the URL, the Web server sends back only the Web page header information (contained inside the HTML <HEAD> section).
 				</br></br>
 				The browser initiates communication with an HTTP server by initiating a TCP connection to the server. Web browsing sessions use server port 80 by default although other ports such as 8080 are sometimes used instead.
 				</br></br>
