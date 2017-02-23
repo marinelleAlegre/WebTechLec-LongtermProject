@@ -161,7 +161,17 @@
 				<b>DELETE</b> - The DELETE method requests that the origin server delete the resource identified by the Request-URI. This method MAY be overridden by human intervention (or other means) on the origin server. The client cannot be guaranteed that the operation has been carried out, even if the status code returned from the origin server indicates that the action has been completed successfully. However, the server SHOULD NOT indicate success unless, at the time the response is given, it intends to delete the resource or move it to an inaccessible location.</br>
 				<b>OPTIONS</b> - The OPTIONS method represents a request for information about the communication options available on the request/response chain identified by the Request-URI. This method allows the client to determine the options and/or requirements associated with a resource, or the capabilities of a server, without implying a resource action or initiating a resource retrieval.</br>
 				<b>TRACE</b> - The TRACE method is used to invoke a remote, application-layer loop- back of the request message.</br>
-				<b>CONNECT</b> - This specification reserves the method name CONNECT for use with a proxy that can dynamically switch to being a tunnel.</br>
+				<b>CONNECT</b> - This specification reserves the method name CONNECT for use with a proxy that can dynamically switch to being a tunnel.
+				</br>Read more about standard methods of HTTP <a href = "https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html">here</a>
+				</br>
+				</br>
+				
+				Some extension methods of HTTP also includes: <b> PROPFIND, PROPPATCH, MKCOL, COPY, MOVE</b></br></br>
+				<b>PROPFIND</b> -  used to retrieve properties, stored as XML, from a web resource. It is also overloaded to allow one to retrieve the collection structure (a.k.a. directory hierarchy) of a remote system.</br>
+				<b>PROPPATCH</b> - The PROPPATCH method processes instructions specified in the request body to set and/or remove properties defined on the resource identified by the Request-URI.</br>
+				<b>MKCOL</b> - MKCOL creates a new collection resource at the location specified by the Request-URI. If the Request-URI is already mapped to a resource, then the MKCOL MUST fail.</br>
+				<b>COPY</b> - The COPY method creates a duplicate of the source resource identified by the Request-URI, in the destination resource identified by the URI in the Destination header. The Destination header MUST be present. The exact behavior of the COPY method depends on the type of the source resource.</br>
+				<b>MOVE</b> - The MOVE operation on a non-collection resource is the logical equivalent of a copy (COPY), followed by consistency maintenance processing, followed by a delete of the source, where all three actions are performed in a single operation. The consistency maintenance step allows the server to perform updates caused by the move, such as updating all URLs, other than the Request-URI that identifies the source resource, to point to the new destination resource.</br>
 				</div>
 
 				<div id = "continuemethods">
@@ -185,6 +195,10 @@
 			</p>
 		</div>
 
+	</div>
+
+	<div class = "bottompage">
+	<footer id ="footerpage">Copyright - WebTechLongTermProject 9421A &copy; 2017</footer>
 	</div>
 
 </body>
