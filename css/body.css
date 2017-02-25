@@ -8,26 +8,31 @@
 #webtek{
 	font-family: "Calibri";
 	font-size: 30px;
+	margin-right: 200px;
+	margin-left: 200px;
 }
 #webtekdescription{
 	font-family: "Calibri";
 	font-size: 25px;
 	margin-top: 5px;
 	margin-bottom: 30px;
-	margin-left: 50px;
-	margin-right: 50px;
+	margin-right: 200px;
+	margin-left: 200px;
 	text-align: justify;
 }
 #timeline{
 	text-align: left;
-	font-family: "Calibri"
+	font-family: "Calibri";
+	margin-right: 200px;
+	margin-left: 200px;
 }
 #year{
 	font-family: "Calibri";
 	font-size: 18px;
-	margin-left: 50px;
-	margin-right: 50px;
+	margin-right: 200px;
+	margin-left: 200px;
 	text-align: justify;
+
 }
 #LECTURE {
 	font-size: 50px;
@@ -129,10 +134,17 @@ textarea {
 	font-family: "Calibri";
 	margin-left: 50px;
 	margin-right: 50px;
+	text-align: justify;
 }
 #messageheaders{
 	font-size: 20px;
 	font-family: "Calibri";
 	margin-left: 50px;
 	margin-right: 50px;
+	text-align: justify;
+}
+#www{
+	margin-right: 160px;
+	margin-left: 160px;
+	text-align: justify;
 }
