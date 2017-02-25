@@ -1,3 +1,4 @@
+
 body{
 	background-image: url ("images/background.jpeg");
 }
@@ -175,6 +176,16 @@ b{
 	padding-top: 5vh;
 	text-align: center;
 }
+
+#table1, #table2 {
+    border: 1px solid black;
+    background-color: lightblue;
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 80px;
+}
+
 #feedback-page{
 	text-align:center;
 }
