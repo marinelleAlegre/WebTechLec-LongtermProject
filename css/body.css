@@ -65,18 +65,18 @@
 
 #table1, #table2 {
 
-    background-color: lightblue;
+    background-color: lightgray;
     padding-top: 50px;
     padding-right: 30px;
     padding-bottom: 50px;
-    padding-left: 80px;
+    padding-left: 30px;
 }
 
 .aboutmarinelle, .aboutfranchesca, .aboutmica {
     padding-top: 50px;
     padding-right: 25px;
     padding-bottom: 50px;
-    padding-left: 30px;
+    padding-left: 27px;
 }
 
 .aboutrenz, .aboutkenneth, .aboutmark {
