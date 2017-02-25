@@ -28,7 +28,7 @@ color : black;
 padding: 10px;
 text-align: center;
 }
-.panel{
+.panel, .versions{
 	font-size: 20px;
 	font-family: "Calibri";
 	margin-left: 50px;
