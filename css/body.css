@@ -62,6 +62,16 @@
 	padding-top: 5vh;
 	text-align: center;
 }
+
+#table1, #table2 {
+
+    background-color: lightblue;
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 80px;
+}
+
 #feedback-page{
 	text-align:center;
 }
