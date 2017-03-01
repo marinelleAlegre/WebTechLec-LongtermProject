@@ -73,3 +73,14 @@ button.accordion:after {
     float: right;
     margin-left: 5px;
 }
+table {
+    font-family: "Calibri";
+    margin-bottom:; 
+    width: 100%;
+}
+
+td, th {
+    border: 0px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
