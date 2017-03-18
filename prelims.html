@@ -381,21 +381,21 @@
 					<li>409 Conflict</li>
                         <dd>Indicates that the request could not be processed because of conflict in the request, such as an edit conflict between multiple simultaneous updates.</dd>
 					<li>410 Gone</li>
-                        <dd></dd>
+                        <dd>Indicates that the resource requested is no longer available and will not be available again. This should be used when a resource has been intentionally removed and the resource should be purged. Upon receiving a 410 status code, the client should not request the resource in the future. Clients such as search engines should remove the resource from their indices.</dd>
 					<li>411 Length Required</li>
-                        <dd></dd>
+                        <dd>The request did not specify the length of its content, which is required by the requested resource.</dd>
 					<li>412 Precondition Failed</li>
-                        <dd></dd>
+                        <dd>The server does not meet one of the preconditions that the requester put on the request.</dd>
 					<li>413 Request Entity Too Large</li>
-                        <dd></dd>
+                        <dd>The request is larger than the server is willing or able to process. Also called "Payload Too Large".</dd>
 					<li>414 Request-URI Too Long</li>
-                        <dd></dd>
+                        <dd>The URI provided was too long for the server to process. Often the result of too much data being encoded as a query-string of a GET request, in which case it should be converted to a POST request.</dd>
 					<li>415 Unsupported Media Type</li>
-                        <dd></dd>
+                        <dd>The request entity has a media type which the server or resource does not support. For example, the client uploads an image as image/svg+xml, but the server requires that images use a different format.</dd>
 					<li>416 Requested Range Not Satisfiable</li>
-                        <dd></dd>
+                        <dd>The client has asked for a portion of the file (byte serving), but the server cannot supply that portion. For example, if the client asked for a part of the file that lies beyond the end of the file</dd>
 					<li>417 Expectation Failed</li>
-                        <dd></dd>
+                        <dd>The server cannot meet the requirements of the Expect request-header field.</dd>
 					<li>421 Misdirected Request</li>
                         <dd></dd>
 					<li>428 Precondition Required</li>
