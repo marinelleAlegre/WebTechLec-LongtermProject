@@ -2,12 +2,12 @@
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
+  max-width: 90%;
   position: relative;
   margin: auto;
 }
 
-.mySlides {
+.Slides {
     display: none;
 }
 
