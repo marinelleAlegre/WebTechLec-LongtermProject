@@ -28,13 +28,13 @@ color : black;
 padding: 10px;
 text-align: center;
 }
-.panel, .versions{
+.panel, .versions, .alpha{
 	font-size: 20px;
 	font-family: "Calibri";
 	margin-left: 50px;
 	margin-right: 50px;
 }
-div.panel, div.versions {
+div.panel, div.versions, div.alpha {
     padding: 0 18px;
     background-color: white;
     max-height: 0;
