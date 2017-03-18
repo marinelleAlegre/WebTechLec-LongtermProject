@@ -397,15 +397,15 @@
 					<li>417 Expectation Failed</li>
                         <dd>The server cannot meet the requirements of the Expect request-header field.</dd>
 					<li>421 Misdirected Request</li>
-                        <dd></dd>
+                        <dd>The request was directed at a server that is not able to produce a response (for example because a connection reuse).</dd>
 					<li>428 Precondition Required</li>
-                        <dd></dd>
+                        <dd>The origin server requires the request to be conditional. Intended to prevent "the 'lost update' problem, where a client GETs a resource's state, modifies it, and PUTs it back to the server, when meanwhile a third party has modified the state on the server, leading to a conflict."</dd>
 					<li>429 Too Many Requests</li>
-                        <dd></dd>
+                        <dd>The origin server requires the request to be conditional. Intended to prevent "the 'lost update' problem, where a client GETs a resource's state, modifies it, and PUTs it back to the server, when meanwhile a third party has modified the state on the server, leading to a conflict."</dd>
 					<li>431 Request Header Fields Too Large</li>
-                        <dd></dd>
+                        <dd>The server is unwilling to process the request because either an individual header field, or all the header fields collectively, are too large.</dd>
 					<li>451 Unavailable For Legal Reasons</li>
-                        <dd></dd>
+                        <dd>A server operator has received a legal demand to deny access to a resource or to a set of resources that includes the requested resource. The code 451 was chosen as a reference to the novel Fahrenheit 451.</dd>
 					</ul>
 					<th><b>Server Error (5xx)</b></th>
 					<ul style="list-style: none;">
