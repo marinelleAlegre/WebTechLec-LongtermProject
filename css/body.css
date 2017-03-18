@@ -173,6 +173,13 @@ textarea {
 	margin-right: 50px;
 	text-align: justify;	
 }
+#extensionmeth{
+	font-size: 20px;
+	font-family: "Calibri";
+	margin-left: 50px;
+	margin-right: 50px;
+	text-align: justify;
+}
 
 /* Three columns side by side */
 .column {
