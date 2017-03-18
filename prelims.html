@@ -410,15 +410,23 @@
 					<th><b>Server Error (5xx)</b></th>
 					<ul style="list-style: none;">
 					<li>500 Internal Server Error</li>
-                        <dd></dd>
+                        <dd>A generic error message, given when an unexpected condition was encountered and no more specific message is suitable.</dd>
 					<li>501 Not Implemented</li>
+                        <dd>The server either does not recognize the request method, or it lacks the ability to fulfill the request. Usually this implies future availability (e.g., a new feature of a web-service API).</dd>
 					<li>502 Bad Gateway</li>
+                        <dd>The server was acting as a gateway or proxy and received an invalid response from the upstream server.</dd>
 					<li>503 Service Unavailable</li>
+                        <dd>The server is currently unavailable (because it is overloaded or down for maintenance). Generally, this is a temporary state.</dd>
 					<li>504 Gateway Timeout</li>
+                        <dd>The server was acting as a gateway or proxy and did not receive a timely response from the upstream server.</dd>
 					<li>505 HTTP Version Not Supported</li>
+                        <dd>The server does not support the HTTP protocol version used in the request.</dd>
 					<li>511 Network Authentication Required</li>
+                        <dd>The client needs to authenticate to gain network access. Intended for use by intercepting proxies used to control access to the network (e.g., "captive portals" used to require agreement to Terms of Service before granting full Internet access via a Wi-Fi hotspot).</dd>
 					<li>598 Network read timeout error</li>
+                        <dd>Used by some HTTP proxies to signal a network read timeout behind the proxy to a client in front of the proxy.</dd>
 					<li>599 Network connect timeout error</li>
+                        <dd>Used to indicate when the connection to the network times out.</dd>
 					</ul>
 				</tr>
 			</div>
