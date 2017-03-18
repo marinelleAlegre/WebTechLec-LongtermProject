@@ -323,12 +323,19 @@
 					<th><b>Success (2xx)</b></th>
 					<ul style="list-style: none;">
 					<li>200 OK</li>
+                        <dd>Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request, the response will contain an entity describing or containing the result of the action.</dd>
 					<li>201 Created</li>
+                        <dd>The request has been fulfilled, resulting in the creation of a new resource.</dd>
 					<li>202 Accepted</li>
+                        <dd>The request has been accepted for processing, but the processing has not been completed. The request might or might not be eventually acted upon, and may be disallowed when processing occurs.</dd>
 					<li>203 Non-Authoritative Information</li>
+                        <dd>The server is a transforming proxy (e.g. a Web accelerator) that received a 200 OK from its origin, but is returning a modified version of the origin's response.</dd>
 					<li>204 No Content</li>
+                        <dd>The server successfully processed the request and is not returning any content.</dd>
 					<li>205 Reset Content</li>
+                        <dd>The server successfully processed the request, but is not returning any content. Unlike a 204 response, this response requires that the requester reset the document view.</dd>
 					<li>206 Partial Content</li>
+                        <dd>The server is delivering only part of the resource (byte serving) due to a range header sent by the client. The range header is used by HTTP clients to enable resuming of interrupted downloads, or split a download into multiple simultaneous streams.</dd>
 					</ul>
 					<th><b>Redirection (3xx)</b></th>
 					<ul style="list-style: none;">
