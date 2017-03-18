@@ -361,29 +361,51 @@
 					<th><b>Client Error (4xx)</b></th>
 					<ul style="list-style: none;">
 					<li>400 Bad Request</li>
-                        <dd></dd>
+                        <dd>The server cannot or will not process the request due to an apparent client error (e.g., malformed request syntax, too large size, invalid request message framing, or deceptive request routing).</dd>
 					<li>401 Unauthorized</li>
+                        <dd>Similar to 403 Forbidden, but specifically for use when authentication is required and has failed or has not yet been provided. The response must include a WWW-Authenticate header field containing a challenge applicable to the requested resource.</dd>
 					<li>402 Payment Required</li>
+                        <dd>Reserved for future use. The original intention was that this code might be used as part of some form of digital cash or micropayment scheme, but that has not happened, and this code is not usually used. Google Developers API uses this status if a particular developer has exceeded the daily limit on requests.</dd>
 					<li>403 Forbidden</li>
+                        <dd>The request was valid, but the server is refusing action. The user might not have the necessary permissions for a resource.</dd>
 					<li>404 Not Found</li>
+                        <dd>The requested resource could not be found but may be available in the future. Subsequent requests by the client are permissible.</dd>
 					<li>405 Method Not Allowed</li>
+                        <dd>A request method is not supported for the requested resource; for example, a GET request on a form that requires data to be presented via POST, or a PUT request on a read-only resource.</dd>
 					<li>406 Not Acceptable</li>
+                        <dd>The requested resource is capable of generating only content not acceptable according to the Accept headers sent in the request.</dd>
 					<li>407 Proxy Authentication Required</li>
+                        <dd>The client must first authenticate itself with the proxy.</dd>
 					<li>408 Request Timeout</li>
+                        <dd>The server timed out waiting for the request. According to HTTP specifications: "The client did not produce a request within the time that the server was prepared to wait. The client MAY repeat the request without modifications at any later time."</dd>
 					<li>409 Conflict</li>
+                        <dd>Indicates that the request could not be processed because of conflict in the request, such as an edit conflict between multiple simultaneous updates.</dd>
 					<li>410 Gone</li>
+                        <dd></dd>
 					<li>411 Length Required</li>
+                        <dd></dd>
 					<li>412 Precondition Failed</li>
+                        <dd></dd>
 					<li>413 Request Entity Too Large</li>
+                        <dd></dd>
 					<li>414 Request-URI Too Long</li>
+                        <dd></dd>
 					<li>415 Unsupported Media Type</li>
+                        <dd></dd>
 					<li>416 Requested Range Not Satisfiable</li>
+                        <dd></dd>
 					<li>417 Expectation Failed</li>
+                        <dd></dd>
 					<li>421 Misdirected Request</li>
+                        <dd></dd>
 					<li>428 Precondition Required</li>
+                        <dd></dd>
 					<li>429 Too Many Requests</li>
+                        <dd></dd>
 					<li>431 Request Header Fields Too Large</li>
+                        <dd></dd>
 					<li>451 Unavailable For Legal Reasons</li>
+                        <dd></dd>
 					</ul>
 					<th><b>Server Error (5xx)</b></th>
 					<ul style="list-style: none;">
