@@ -1,4 +1,4 @@
-html {
+body {
   box-sizing: border-box;
 }
 
@@ -35,8 +35,4 @@ html {
     content: "";
     clear: both;
     display: table;
-}
-
-.title {
-    color: grey;
 }
