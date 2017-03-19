@@ -105,19 +105,19 @@ button.accordion:after {
 		border-collapse:collapse; 
 	}
 	.TableRHF td{ 
-		padding:10px; border:#4e95f4 1px solid;
+		padding:10px; border:#788da1 1px solid;
 	}
 	
 	.TableRHF tr{
-		background: #b8d1f3;
+		background: #495a69;
 	}
 	
 	.TableRHF tr:nth-child(odd){ 
-		background: #b8d1f3;
+		background: #495a69;
 	}
 	
 	.TableRHF tr:nth-child(even){
-		background: #dae5f4;
+		background: #5e7387;
 	}
 
 
