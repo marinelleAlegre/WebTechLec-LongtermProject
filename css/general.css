@@ -183,13 +183,15 @@ body, html {
 
 .bgimg {
     /* Background image */
-    background-color: red;
+    background-color: #6d8093;
     /* Full-screen */
-    height: 100%;
+    height: 80%;
+    width: 70%;
+    margin-left: 15%;
     /* Center the background image */
     background-position: center;
     /* Scale and zoom in the image */
-    background-size: cover;
+    background-size: 50px;
     /* Add position: relative to enable absolutely positioned elements inside the image (place text) */
     position: relative;
     /* Add a white text color to all elements inside the .bgimg container */
