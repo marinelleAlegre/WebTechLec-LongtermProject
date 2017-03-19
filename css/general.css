@@ -1,5 +1,6 @@
 body{
     background-color: #f2ecd0;
+    color: white;
 }
 
 b{
@@ -40,9 +41,9 @@ body, html {
 }
 
 .container{
-	background-color: #11A3EC;
-	margin-left: 170px;
-	margin-right: 170px;
+	background-color: #8598aa;
+	margin-left: 120px;
+	margin-right: 120px;
 }
 
 .panel, .versions, .alpha{
@@ -51,6 +52,9 @@ body, html {
 	margin-left: 50px;
 	margin-right: 50px;
     width: 66%;
+}
+.panel, .versions, .alpha, #references, h1, .description, .members{
+    color: black;
 }
 
 div.panel, div.versions, div.alpha {
