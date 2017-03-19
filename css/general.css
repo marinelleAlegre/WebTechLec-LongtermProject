@@ -81,20 +81,12 @@ button.accordion:after {
     margin-left: 5px;
 }
 
-table{
-    display: block;
-    width: 25%;
-    float: left;
-}
-
-
-
 	.TableRHF{
 		width:100%; 
 		border-collapse:collapse; 
 	}
 	.TableRHF td{ 
-		padding:7px; border:#4e95f4 1px solid;
+		padding:4px; border:#4e95f4 1px solid;
 	}
 	
 	.TableRHF tr{
