@@ -31,6 +31,11 @@ color : black;
 padding: 10px;
 text-align: center;
 }
+.container{
+	background-color: blue;
+	margin: 50px 100px 0px 200px;
+	box-shadow: 10px 10px 5px #888888;
+}
 
 .panel, .versions, .alpha{
 	font-size: 20px;
@@ -86,7 +91,7 @@ button.accordion:after {
 		border-collapse:collapse; 
 	}
 	.TableRHF td{ 
-		padding:4px; border:#4e95f4 1px solid;
+		padding:10px; border:#4e95f4 1px solid;
 	}
 	
 	.TableRHF tr{
@@ -103,11 +108,6 @@ button.accordion:after {
 
 body{
 	background-color: #f2ecd0;
-}
-.container{
-    background-color: red;
-    margin-left: 20%;
-    margin-right: 20%;
 }
 
 b{
