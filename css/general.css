@@ -94,7 +94,10 @@ body{
 b{
 	font-size: 20px;
 }
-
+h1{
+    font-family: "Calibri";
+    font-size: 30px;
+}
 h2{
 	margin-left: 50px;
 	font-family: "Calibri";
