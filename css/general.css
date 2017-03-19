@@ -87,6 +87,28 @@ table{
     float: left;
 }
 
+
+
+	.TableRHF{
+		width:100%; 
+		border-collapse:collapse; 
+	}
+	.TableRHF td{ 
+		padding:7px; border:#4e95f4 1px solid;
+	}
+	
+	.TableRHF tr{
+		background: #b8d1f3;
+	}
+	
+	.TableRHF tr:nth-child(odd){ 
+		background: #b8d1f3;
+	}
+	
+	.TableRHF tr:nth-child(even){
+		background: #dae5f4;
+	}
+
 body{
 	background-color: #f2ecd0;
 }
