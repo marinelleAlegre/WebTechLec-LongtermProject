@@ -100,27 +100,26 @@ button.accordion:after {
     margin-left: 5px;
 }
 
-	.TableRHF{
-		width:100%; 
-		border-collapse:collapse; 
-	}
-	.TableRHF td{ 
-		padding:10px; border:#788da1 1px solid;
-	}
-	
-	.TableRHF tr{
-		background: #495a69;
-	}
-	
-	.TableRHF tr:nth-child(odd){ 
-		background: #495a69;
-	}
-	
-	.TableRHF tr:nth-child(even){
-		background: #5e7387;
-	}
+.TableRHF{
+	width:100%; 
+	border-collapse:collapse; 
+}
 
+.TableRHF td{ 
+	padding:10px; border:#788da1 1px solid;
+}
 
+.TableRHF tr{
+	background: #495a69;
+}
+	
+.TableRHF tr:nth-child(odd){ 
+	background: #495a69;
+}
+	
+.TableRHF tr:nth-child(even){
+	background: #5e7387;
+}
 
 table{''
     display: block;
