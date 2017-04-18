@@ -28,6 +28,99 @@ footer {
     padding: 10%;
     text-align: center;
 }
+#bannerprelims {
+    padding-top: 15vh;
+    background: black url('images/p1.jpg') no-repeat fixed center;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    color: black;
+    font-size: 3em;
+}
+
+#bannerprelims blockquote {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 10%;
+    text-align: center;
+}
+#bannermidterms {
+    padding-top: 15vh;
+    background: black url('images/a1.jpg') no-repeat fixed center;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    color: black;
+    font-size: 3em;
+}
+
+#bannermidterms blockquote {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 10%;
+    text-align: center;
+}
+#bannerfinals {
+    padding-top: 15vh;
+    background: black url('images/p2.jpg') no-repeat fixed center;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    color: black;
+    font-size: 3em;
+}
+
+#bannerfinals blockquote {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 10%;
+    text-align: center;
+}
+#bannerglossary {
+    padding-top: 15vh;
+    background: black url('images/p4.jpg') no-repeat fixed center;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    color: black;
+    font-size: 3em;
+}
+
+#bannerglossary blockquote {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 10%;
+    text-align: center;
+}
+#bannerreferences {
+    padding-top: 15vh;
+    background: black url('images/p6.jpg') no-repeat fixed center;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    color: black;
+    font-size: 3em;
+}
+
+#bannerreferences blockquote {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 10%;
+    text-align: center;
+}
+#bannerabout {
+    padding-top: 15vh;
+    background: black url('images/p7.png') no-repeat fixed center;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    color: black;
+    font-size: 3em;
+}
+
+#bannerabout blockquote {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 10%;
+    text-align: center;
+}
+
+
+
 
 body{
     background-color: #f2ecd0;
