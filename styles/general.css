@@ -405,29 +405,6 @@ hr {
         font-family: Arial, Helvetica, sans-serif;
     }
     
-    h1 {
-        font-size: 2.2em;
-    }
-    
-    h2 {
-        font-size: 1.8em;
-    }
-    
-    h3 {
-        font-size: 1.6em;
-    }
-    
-    h4 {
-        font-size: 1.4em;
-    }
-    
-    h5 {
-        font-size: 1.3em;
-    }
-    
-    h6 {
-        font-size: 1.1em;
-    }
     
     a {
         transition: color .4s;
