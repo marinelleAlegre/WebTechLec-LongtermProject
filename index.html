@@ -1,113 +1,41 @@
-<!DOCTYPE HTML>	
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<title>Home</title>
-<Link rel ="stylesheet" href="css/general.css"/>
-<Link rel ="stylesheet" href="css/body.css"/>
-<Link rel ="stylesheet" href="css/nav.css"/>
-
-
-<Link rel="icon" href="images/icon.png">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles/dwarf.css">
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/navigation.css">
+    <Link rel="icon" href="images/icon.png">
 </head>
+
 <body>
-	<Link rel ="stylesheet" href="css/style.css"/>
-	<div id = "Subject">
-	<h1 id ="HOME">WEB SYSTEMS AND TECHNOLOGIES</h1>
-
-	<nav id = "navigator">
-		<ul class="nav nav-right nav-fixed">
-			<li><a href="about.html">Our Team</a></li>
-			<li><a href="references.html">References</a></li>
-			<li><a href="glossary.html">Glossary of terms</a></li>	
-			<li class="dropdown">
-				<a class="dropbtn">Lecture Notes</a>
-				<div class="dropdown-content">   
-					<a href="prelims.html">Prelims</a>
-					<a href="midterms.html">Midterms</a>
-					<a href="finals.html">Finals</a>
-			<li><a href="index.html">Home</a></li>	
-			<li> <img class="logo" src ="images/logo.jpg" alt = "Logo"/> </li>
-				</div>
-			</li>
-		</ul>
-	</nav>
-	</div>
-<Link rel ="stylesheet" href="css/slideshow.css"/>
-<div class="slideshow-container">
-
-<div class="Slides fade">
-  <div class="numbertext">1 / 4</div>
-  <img src="images/p1.jpg" style="width:100%">
-  <div class="text">Preview</div>
-</div>
-
-<div class="Slides fade">
-  <div class="numbertext">2 / 4</div>
-  <img src="images/p2.jpg" style="width:100%">
-  <div class="text">Preview</div>
-</div>
-
-<div class="Slides fade">
-  <div class="numbertext">3 / 4</div>
-  <img src="images/p3.jpg" style="width:100%">
-  <div class="text">Preview</div>
-</div>
-
-<div class="Slides fade">
-  <div class="numbertext">4 / 4</div>
-  <img src="images/p4.jpg" style="width:100%">
-  <div class="text">Preview</div>
-</div>
-
-<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-<a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-</div>
-<br>
-
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span> 
-  <span class="dot" onclick="currentSlide(2)"></span> 
-  <span class="dot" onclick="currentSlide(3)"></span> 
-  <span class="dot" onclick="currentSlide(4)"></span>
-</div>
-
-<br>
-
-<div class = "bottompage">
-  <footer id ="footerpage">Copyright - WebTechLongTermProject 9421A &copy; 2017</footer>
-  </div>
-
-<script>
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("Slides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}
-</script>	
-
+    <nav>
+        <ul class="nav nav-right nav-fixed">
+            <li><a href="about.html">OUR TEAM</a></li>
+            <li><a href="references.html">REFERENCES</a></li>
+            <li><a href="glossary.html">GLOSSARY OF TERMS</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">LECTURE NOTES</a>
+                <div class="dropdown-content">
+                    <a href="prelims.html">PRELIMS</a>
+                    <a href="midterms.html">MIDTERMS</a>
+                    <a href="midterms.html">FINALS</a>
+                </div>
+            </li>
+            <li><a href="index.html">Home</a></li>
+        </ul>
+    </nav>
+    <div class="">
+        <div id="banner">
+            <blockquote>
+                WEB SYSTEMS AND TECHNOLOGIES
+            </blockquote>
+        </div>
+    </div>
+    <footer class="footer text-center">
+        <p>Copyright - WebTechLongTermProject 9421A&copy; 2017</p>
+    </footer>
 </body>
+
 </html>
