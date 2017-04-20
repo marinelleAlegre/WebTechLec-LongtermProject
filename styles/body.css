@@ -8,17 +8,17 @@
 #webtek{
 	font-family: "Calibri";
 	font-size: 30px;
-	margin-right: 200px;
-	margin-left: 200px;
+	margin-right: 70px;
+	margin-left: 70px;
 }
 #webtekdescription{
 	font-family: "Calibri";
-	font-size: 25px;
+	font-size: 20px;
 	margin-top: 5px;
 	margin-bottom: 30px;
-	margin-right: 200px;
-	margin-left: 200px;
-	text-align: justify;
+	margin-right: 70px;
+	margin-left: 70px;
+	
 }
 #timeline{
 	text-align: left;
@@ -28,10 +28,10 @@
 }
 #year{
 	font-family: "Calibri";
-	font-size: 18px;
-	margin-right: 200px;
-	margin-left: 200px;
-	text-align: justify;
+	font-size: 20px;
+	margin-right: 70px;
+	margin-left: 70px;
+	
 
 }
 #LECTURE {
@@ -39,7 +39,6 @@
 	font-family: "Century Gothic";
 	filter: glow(color=red,strength=3);
 	padding-top: 5vh;
-	text-align: center;
 }
 #GLOSSARY {
 	font-size: 50px;
@@ -139,47 +138,47 @@ textarea {
 	font-size: 20px;
 	font-family: "Calibri";
 	margin-left: 50px;
-	margin-right: 50px;
+	
 }
 #continuemethods{
 	font-size: 20px;
 	font-family: "Calibri";
 	margin-left: 50px;
-	margin-right: 50px;
-	text-align: justify;
+	
+	
 }
 #messageheaders{
 	font-size: 20px;
 	font-family: "Calibri";
 	margin-left: 50px;
-	margin-right: 50px;
-	text-align: justify;
+	
+	
 }
 #response{
 	font-size: 20px;
 	font-family: "Calibri";
 	margin-left: 50px;
-	margin-right: 50px;
-	text-align: justify;
+	
+	
 }
 #www{
 	margin-right: 160px;
-	margin-left: 160px;
-	text-align: justify;
+	margin-left: 60px;
+	
 }
 #request{
 	font-size: 20px;
 	font-family: "Calibri";
 	margin-left: 50px;
-	margin-right: 50px;
-	text-align: justify;	
+	
+		
 }
 #extensionmeth{
 	font-size: 20px;
 	font-family: "Calibri";
-	margin-left: 50px;
-	margin-right: 50px;
-	text-align: justify;
+	
+	
+	
 }
 
 /* Three columns side by side */
