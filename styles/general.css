@@ -124,7 +124,7 @@ footer {
 
 
 body{
-    background-color: #f2ecd0;
+    background-color: #dfbee5;
     color: white;
 }
 
@@ -166,7 +166,7 @@ body, html {
 }
 
 .container{
-	background-color: #69768e;
+	background-color: #617b9b;
 	margin-left: 120px;
 	margin-right: 120px;
 }
@@ -229,20 +229,14 @@ div.panel {
 }
 
 .TableRHF td{ 
-	padding:10px; border:#788da1 1px solid;
+	padding:10px; border:#19191e 1px solid;
 }
 
 .TableRHF tr{
-	background: #495a69;
+	background: #4a4b56;
 }
 	
-.TableRHF tr:nth-child(odd){ 
-	background: #495a69;
-}
-	
-.TableRHF tr:nth-child(even){
-	background: #5e7387;
-}
+
 
 table{''
     display: block;
