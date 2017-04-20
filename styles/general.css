@@ -174,9 +174,9 @@ body, html {
 .panel, .versions, .alpha{
 	font-size: 20px;
 	font-family: "Calibri";
-	margin-left: 50px;
-	margin-right: 50px;
-    width: 66%;
+	margin-left: 150px;
+	margin-right: 150px;
+    width: 50%;
 }
 
 .panel, .versions, .alpha, #references, h1, .description, .members{
