@@ -1,13 +1,13 @@
 footer {
     width: 100%;
-    background: #333;
+    background: gray;
     margin-top: 5%;
-    padding-top: 5%;
-    padding: 3vh 0;
-    color: white;
+    padding: 3vh 3vh;
+    color: black;
+    letter-spacing : 5px;
+    text-align: center;
+    clear :both;
 }
-
-
 
 /*************** index.html ***************************/
 
@@ -152,14 +152,7 @@ p{
     margin-right: 50px;
 }
 
-footer {
-clear :both;
-background-color : gray;
-letter-spacing : 5px;
-color : black;
-padding: 10px;
-text-align: center;
-}
+
 
 body, html {
     height: 100%
