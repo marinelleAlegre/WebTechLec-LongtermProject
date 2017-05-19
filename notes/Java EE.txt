@@ -1,0 +1,35 @@
+Java EE
+> Java EE is an open, standards-based development and deployment platform for creating distributed, transactional, reliable, secure, multitiered,
+web-based, server-centric, component-based enterprise applications
+> Java EE Application Model
+ * Java programming language, Java Virtual Machine (JVM)
+ * Java EE Components
+  -- Java EE Clients
+	--- Application Clients, Applets (embedded in web clients)
+  -- Web Components
+	--- Servlets, JavaServer Pages (JSP), JavaServer Faces (JSF)
+ 	--- Enterprise JavaBeans (EJBM)
+ * Java EE Containers
+ -- Client containers, web container, EJB container
+ * Java EE Server
+> Java EE Web Application
+ * Collection of resources installed under a specific subset of the URL namespace of a web application server compliant with the Java
+EE Specification (e.g. Apache?s Tomcat, Apache?s Geronimo, Sun Microsystems? Glassfish, IBM?s WebSphere, etc.)
+ * Resources
+  -- Static resources: web pages, images, stylesheets, etc. (serves as is)
+  -- Dynamic resources: servlets, JSPs
+  -- Miscellaneous resources: business object classes (e.g. Java Beans, EJB), support libraries, etc.
+ * XML-formatted descriptor and configuration files
+  -- web.xml, application.xml, context.xml, etc.
+ * Organized into a standard hierarchical structure and typically packaged and deployed as WAR or EAR files
+> Java EE APIs
+ * Enterprise JavaBeans Technology
+ * Java Servlet Technology
+ * Java Server Pages
+ * Java Server Pages Standard Tag Library
+ * Java Server Faces
+ * Java Msg Service API
+ * Java Transaction API
+ * JavaMail API
+ * JavaBeans Activation Framework
+ * Java API for XML Processing
