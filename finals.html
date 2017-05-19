@@ -227,9 +227,41 @@
         Use the createServer() method to create an HTTP server:
         </br>
         <center><img src="styles/images/node3.png" width = "60%"></center>
-
-
+		<p><b>Read the Query String</b></br>
+		The function passed into the http.createServer() has a req argument that represents the request from the client, as an object (http.IncomingMessage object).
+        </br></br>
+        This object has a property called "url" which holds the part of the url that comes after the domain name:
+        </br>
+        <center><img src="styles/images/node4.png" width = "60%"></center>
+		<p><b>Node.js as a File Server</b></br>
+		The Node.js file system module allow you to work with the file system on your computer.
+        </br></br>
+        To include the File System module, use the require() method:
+        </br>
+        <center><img src="styles/images/node5.png" width = "60%"></center>
  		</p>
+		<p><b>Common use for the File System module:</b></br>
+		1. Read files
+			</br>
+		2. Create files
+			</br>
+		3. Update files
+			</br>
+		4. Delete files
+			</br>
+		<p><b>What is NPM?</b></br>
+		NPM is a package manager for Node.js packages, or modules if you like.
+        </br>
+        <a href="https://www.npmjs.com/">www.npmjs.com</a>hosts thousands of free packages to download and use.
+		</br>
+        The NPM program is installed on your computer when you install Node.js
+        </br>
+		<p><b>Events in Node.js</b></br>
+		Every action on a computer is an event. Like when a connection is made or a file is opened.
+        </br></br>
+        Objects in Node.js can fire events, like the readStream object fires events when opening and closing a file:
+        </br>
+        <center><img src="styles/images/node6.png" width = "60%"></center>
   </div>
 </div>
   <div class="bottomleft">
