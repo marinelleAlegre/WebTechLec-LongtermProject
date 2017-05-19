@@ -1,0 +1,82 @@
+Asynchronous JavaScript and XML (AJAX)
+> Synchronous Request
+ - Recommended for few small requests. JavaScript will not continue to execute, until the server response is ready. If the server is busy or slow, the application will hang or stop.
+
+var xhr = new XMLHttpRequest();
+xhr.open(“GET”, “somepage.txt”, false);
+xhr.send(null);
+if(xhr.status==200){
+var str = xhr.responseText;
+}
+
+> Asynchronous Request
+ - JavaScript does not have to wait for the server response. It can execute other scripts while waiting for server response, and deal
+with the response when the response is ready.
+
+var xhr = new XMLHttpRequest();
+xhr.open(“POST”, “products.php”, true);
+xhr.setRequestHeader(“Content-Type”, “application/x-www-form-urlencoded”);
+
+xhr.onreadystatechange = function(){
+if(this.readyState == 4 && this.status == 200){
+	var hdrDate = this.getResponseHeader(“Date”);
+	var xml = this.responseXML;
+	}
+}
+xhr.send(“productID=1234&catID=5678”);
+
+> Cross-Browser and Old Browser Support
+
+var xhr;
+if(typeof XMLHttpRequest != “undefined”){
+	xhr = new XMLHttpRequest();
+}else if (window.ActiveXObject){
+	var activeXIDs = [“MSXML2.XmlHttp.5.0”,
+			 “MSXML2.XmlHttp.4.0”,
+ 			 “MSXML2.XmlHttp.3.0”,
+			 “MSXML2.XmlHttp”,
+			 “Microsoft.XmlHttp”];
+	for(var i=0; i<activeXIDs.length;i++){
+	try{
+		xhr = new ActiveXObject(activeXIDs[i]);
+	}catch(e){}
+	}
+}
+> Three important properties of the XMLHttpRequest Object
+* onreadystatechange
+- Stores a function to be called automatically each time readyState changes
+* readyState
+ -- 0 : request not initialized
+ -- 1 : server connection established
+ -- 2 : request received
+ -- 3 : processing request
+ -- 4 : request finished and response is ready
+* status
+ -- 200 : OK
+ -- 404 : Not Found
+
+
+Document Object Model
+> Document Object Collections
+o anchors[]
+o forms[]
+o images[]
+o links[]
+> Document Object Properties
+o cookie
+o documentMode
+o domain
+o lastModified
+o readyState
+o referrer
+o title
+o URL
+> Document Object Methods
+o close()
+o getElementById()
+o getElementsByName()
+o getElementsByTagName()
+o open()
+o write()
+o writeln()
+
