@@ -38,13 +38,120 @@
 </div>
 <body>
 
-<div class="bgimg">
-  <div class="topleft">
-  </div>
-  <div class="middle">
-    <h1>TO BE FILLED UP SOON</h1>
+<div class="container">
+  <div id="html5">
+    <h1><center>Servlets</center></h1>
+	<ul>
+		<li>Java Object based on the Servlet API</li>
+		<li>Runs in a server application to answer client requests; technically, servlets are not tied to a specific client-server protocol, but they are most
+	commonly used with HTTP and the term „servlet‟ is often used in the context of an “HTTP Servlet”</li>
+		<li>Web-tier components in the Java EE architecture.</li>
+		<li>Runs in, and is managed by, a web-tier container called the „Servlet Container‟</li>
+		<li>Mapped to URLs to which clients send requests</li>
+		<li>Typically asked with (among other things)</li>
+			<ul><li>Processing and/or storing data submitted vial HTML forms</li></ul>
+			<ul><li>Generating dynamic content</li></ul>
+		<li>javax.servlet</li>
+				<ul><li>Servlet, GenericServlet</li></ul>
+				<ul><li>ServletRequest, ServletResponse</li></ul>
+				<ul><li>ServletConfig, ServletContext</li></ul>
+				<ul><li>RequestDispatcher</li></ul>
+		<li>javax.servlet.http</li>
+				<ul><li>HttpServlet</li></ul>
+				<ul><li>HttpServletRequest</li></ul>
+				<ul><li>HttpServletResponse</li></ul>
+				<ul><li>HttpSess</li></ul>s
+		<li>Servlet Processing</li>
+				<ul><li>Client sends a request to a web server URL that is mapped to a servlet. Web server passes on the request to the servlet container</li></ul>
+				<ul><li>Servlet container checks if servlet is already loaded</li></ul>
+				<ul><li>If it is not yet loaded, servlet container loads the servlet class and instantiates the servlet, and calls its init method.</li></ul>
+				<ul><li>Servlet container invokes the servlet‟s service method, passing request and response objects as arguments</li></ul>
+				<ul><li>Servlet processes the request using the response object to create the response, which is returned by the servlet container to the
+				web server, which in turn sends the response to the client</li></ul>
+				<ul><li>Subsequent request to the servlet will not require servlet re-instantiation, unless the servlet has been unloaded; before a servlet is
+				unloaded, the servlet container invokes its destroy method.</li></ul>
+		<li>init(config)</li>
+				<ul><li>Invoked once on the servlet by the servlet container when the servlet is instantiated; can be used by the servlet for one-time startup
+				initialization</li></ul>
+		<li>service(request, response)</li>
+				<ul><li>Invoked each time the servlet is called upon to process a request (typically on a separate thread for each call)</li></ul>
+				<ul><li>In HttpServlet, the default Service implementation maps the call to a specific doXXX() method (e.g. doGet, doPost) which is
+				typically overridden to affect the servlet‟s functionality</li></ul>
+		<li>Destroy()</li>
+				<ul><li>Invoked on the servlet by the servlet container when the servlet is to be unloaded (e.g. when the application is stopped or
+				undeployed); can be used by the servlet for clean-up processing (e.g. resource deallocation)</ul></li>
+		<li>Servlet Request Processing (HttpServletRequest)</li>
+				<ul><li>Retrieving user-supplied request parameters</li></ul>
+				<ul><li>Retrieving request header values</li></ul><br>
+		<li>Servlet Response Processing (HttpServletResponse)</li>
+				<ul><li>Setting response status code</li></ul>
+				<ul><li>Setting response headers</li></ul>
+				<ul><li>Obtaining output object for sending the response</li></ul><br>
+		<li>Servlet Request Dispatching (RequestDispatcher)</li>
+				<ul><li>Obtain a RequestDispatcher to a resource (static or dynamic) from the request object</li></ul>
+					<p>RequestDispatcher rqstDsp;
+					<p>rqstDsp = request.getRequestDispatcher(res);
+				<ul><li>Include the dispatcher resource (or its output) in the current response; one or more resources can be included (e.g. use for banners,
+				footers, etc.)</ul></li>
+					<p>rqstDsp.include(request, response);
+				<ul><li>Forwards the processing of the current request to the dispatcher resource; the servlet processing the current request must not
+				generate a response ( e.g. use in MVC “controller” servlets)</ul></li>
+					<p>rqstDsp.forward(request, response);
+		<li>Session Tracking(HttpSession)</li>
+				<ul><li>Session tracking support is implemented either cookies or URL-rewriting</ul></li>
+				<ul><li>Obtaining session object from the current request</ul></li>
+					<p>HttpSession session;
+					<p>session = request.getSession(createNew);
+				<ul><li>Obtaining session information (HttpSession)</ul></li><br>
+		<li>getCreationTime(), getLastAccessedTime(), getMaxInactiveInternal(), getId(), isNew(),setMaxInactiveInterval(int val)</li>
+				<ul><li>destroying sessions</ul></li>
+		<li><invalidate()/li>
+				<ul><li>URL-rewriting(HttpServletResponse)</ul></li>
+				<ul><li>encodeURL(String url), encodeRedirectURL(String url</ul></li><br>
+				
+		<li>Web Context (ServletContext)</li>
+				
+				<ul><li>a web application is associated with a context, which is an object that provides methods that servlets use to communicate with the servlet container</ul></li>
+				<ul><li>obtaining the servlet context (HttpServlet)</ul></li>
+					<p>ServletContext context;
+					<p>context = this.getServletContext();
+	
+				<ul><li>obtaining context information (ServletContext)</ul></li>
+					<p>getServerInfo(), getContextPath(), getRealPath(), getResource(), getResourceAsStream(),
+					getMimeType, getInitParameter(), getInitParameterNames(), getRequestDispatcher(), getContext()
+	
+		<li>Servlet Configuration (ServletConfig)</li>
+			
+				<ul><li> getServletName(), getServletContext(), getInitParameter(), getInitParameterNames()
+				Information sharing using scope objects</ul></li>
+				
+				<ul><li> A request may be processed by several web application components (e.g. through calls to RequestDispatcher forwad/include) and
+				there may be a need for one component to communicate information to the other components in the request processing chain.</ul></li>
+				
+				<ul><li> A client session typically consists of multiple requests, which due to the stateless nature of HTTP, will appear to the application as being
+				“unrelated” to one another; the HttpSession object can be used to “relate” these requests together, but there may still be a need to share
+				information created in one request with a subsequent request</ul></li>
+				
+				<ul><li>Different web application components may require access to common resources or information (e.g. page counters, shared database
+				connection).</ul></li>
+				
+				<ul><li> Information sharing is accomplished by creating attribute objects and exposing these objects in the appropriate scope.</ul></li>
+				
+				<ul><li> Scopes:</ul></li>
+				
+					<p>Request scope (HttpServletRequest)
+					<p>Session scope (HttpSession)
+					<p>Web Application or Web Context scope (ServletContext)
+					<p>Page scope (local objects in a servlet)
+				<ul><li>Creating, accessing, and removing attribute objects</ul></li>
+					<p>setAttribute (String attrName, Object attrValue)
+					<p>getAttribute (String attrName)
+					<p>getAttributeNames()
+					<p>removeAttribute (String attrName)
+	</ul>
+		
     <hr>
-    <p>28 days</p>
+    <p></p>
   </div>
   <div class="bottomleft">
   </div>
