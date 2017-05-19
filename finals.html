@@ -40,27 +40,27 @@
 
 <div class="container">
   <div id="html5">
-    <h1><center>Servlets</center></h1>
+    <h2>Servlets</h2>
+    <p>
 	<ul>
 		<li>Java Object based on the Servlet API</li>
-		<li>Runs in a server application to answer client requests; technically, servlets are not tied to a specific client-server protocol, but they are most
-	commonly used with HTTP and the term „servlet‟ is often used in the context of an “HTTP Servlet”</li>
+		<li>Runs in a server application to answer client requests; technically, servlets are not tied to a specific client-server protocol, but they are most commonly used with HTTP and the term „servlet‟ is often used in the context of an “HTTP Servlet”</li>
 		<li>Web-tier components in the Java EE architecture.</li>
 		<li>Runs in, and is managed by, a web-tier container called the „Servlet Container‟</li>
 		<li>Mapped to URLs to which clients send requests</li>
 		<li>Typically asked with (among other things)</li>
 			<ul><li>Processing and/or storing data submitted vial HTML forms</li></ul>
-			<ul><li>Generating dynamic content</li></ul>
-		<li>javax.servlet</li>
+			<ul><li>Generating dynamic content</li></ul></br></p>
+		<p><li>javax.servlet</li>
 				<ul><li>Servlet, GenericServlet</li></ul>
 				<ul><li>ServletRequest, ServletResponse</li></ul>
 				<ul><li>ServletConfig, ServletContext</li></ul>
-				<ul><li>RequestDispatcher</li></ul>
+				<ul><li>RequestDispatcher</li></ul></br></p>
 		<li>javax.servlet.http</li>
 				<ul><li>HttpServlet</li></ul>
 				<ul><li>HttpServletRequest</li></ul>
 				<ul><li>HttpServletResponse</li></ul>
-				<ul><li>HttpSess</li></ul>s
+				<ul><li>HttpSess</li></ul></br>
 		<li>Servlet Processing</li>
 				<ul><li>Client sends a request to a web server URL that is mapped to a servlet. Web server passes on the request to the servlet container</li></ul>
 				<ul><li>Servlet container checks if servlet is already loaded</li></ul>
@@ -69,90 +69,135 @@
 				<ul><li>Servlet processes the request using the response object to create the response, which is returned by the servlet container to the
 				web server, which in turn sends the response to the client</li></ul>
 				<ul><li>Subsequent request to the servlet will not require servlet re-instantiation, unless the servlet has been unloaded; before a servlet is
-				unloaded, the servlet container invokes its destroy method.</li></ul>
+				unloaded, the servlet container invokes its destroy method.</li></ul></br>
 		<li>init(config)</li>
 				<ul><li>Invoked once on the servlet by the servlet container when the servlet is instantiated; can be used by the servlet for one-time startup
-				initialization</li></ul>
+				initialization</li></ul></br>
 		<li>service(request, response)</li>
 				<ul><li>Invoked each time the servlet is called upon to process a request (typically on a separate thread for each call)</li></ul>
 				<ul><li>In HttpServlet, the default Service implementation maps the call to a specific doXXX() method (e.g. doGet, doPost) which is
-				typically overridden to affect the servlet‟s functionality</li></ul>
+				typically overridden to affect the servlet‟s functionality</li></ul></br>
 		<li>Destroy()</li>
 				<ul><li>Invoked on the servlet by the servlet container when the servlet is to be unloaded (e.g. when the application is stopped or
-				undeployed); can be used by the servlet for clean-up processing (e.g. resource deallocation)</ul></li>
+				undeployed); can be used by the servlet for clean-up processing (e.g. resource deallocation)</ul></li></br>
 		<li>Servlet Request Processing (HttpServletRequest)</li>
 				<ul><li>Retrieving user-supplied request parameters</li></ul>
-				<ul><li>Retrieving request header values</li></ul><br>
+				<ul><li>Retrieving request header values</li></ul><br></br>
 		<li>Servlet Response Processing (HttpServletResponse)</li>
 				<ul><li>Setting response status code</li></ul>
 				<ul><li>Setting response headers</li></ul>
-				<ul><li>Obtaining output object for sending the response</li></ul><br>
+				<ul><li>Obtaining output object for sending the response</li></ul></br>
 		<li>Servlet Request Dispatching (RequestDispatcher)</li>
 				<ul><li>Obtain a RequestDispatcher to a resource (static or dynamic) from the request object</li></ul>
-					<p>RequestDispatcher rqstDsp;
-					<p>rqstDsp = request.getRequestDispatcher(res);
+					<p><ul><li>RequestDispatcher rqstDsp;</ul></li></p>
+					<p><ul><li>rqstDsp = request.getRequestDispatcher(res);/ul></li></p>
 				<ul><li>Include the dispatcher resource (or its output) in the current response; one or more resources can be included (e.g. use for banners,
 				footers, etc.)</ul></li>
-					<p>rqstDsp.include(request, response);
-				<ul><li>Forwards the processing of the current request to the dispatcher resource; the servlet processing the current request must not
-				generate a response ( e.g. use in MVC “controller” servlets)</ul></li>
-					<p>rqstDsp.forward(request, response);
+					<p><ul><li>rqstDsp.include(request, response);</ul></li></p>
+				<ul><li>Forwards the processing of the current request to the dispatcher resource; the servlet processing the current request must not generate a response ( e.g. use in MVC “controller” servlets)</ul></li>
+					<p><ul><li>rqstDsp.forward(request, response);</ul></li></p></br>
 		<li>Session Tracking(HttpSession)</li>
 				<ul><li>Session tracking support is implemented either cookies or URL-rewriting</ul></li>
 				<ul><li>Obtaining session object from the current request</ul></li>
-					<p>HttpSession session;
-					<p>session = request.getSession(createNew);
+					<p>HttpSession session;</p>
+					<p>session = request.getSession(createNew);</p>
 				<ul><li>Obtaining session information (HttpSession)</ul></li><br>
 		<li>getCreationTime(), getLastAccessedTime(), getMaxInactiveInternal(), getId(), isNew(),setMaxInactiveInterval(int val)</li>
 				<ul><li>destroying sessions</ul></li>
 		<li><invalidate()/li>
 				<ul><li>URL-rewriting(HttpServletResponse)</ul></li>
-				<ul><li>encodeURL(String url), encodeRedirectURL(String url</ul></li><br>
-				
-		<li>Web Context (ServletContext)</li>
-				
-				<ul><li>a web application is associated with a context, which is an object that provides methods that servlets use to communicate with the servlet container</ul></li>
-				<ul><li>obtaining the servlet context (HttpServlet)</ul></li>
-					<p>ServletContext context;
-					<p>context = this.getServletContext();
-	
-				<ul><li>obtaining context information (ServletContext)</ul></li>
-					<p>getServerInfo(), getContextPath(), getRealPath(), getResource(), getResourceAsStream(),
-					getMimeType, getInitParameter(), getInitParameterNames(), getRequestDispatcher(), getContext()
-	
-		<li>Servlet Configuration (ServletConfig)</li>
-			
-				<ul><li> getServletName(), getServletContext(), getInitParameter(), getInitParameterNames()
-				Information sharing using scope objects</ul></li>
-				
-				<ul><li> A request may be processed by several web application components (e.g. through calls to RequestDispatcher forwad/include) and
-				there may be a need for one component to communicate information to the other components in the request processing chain.</ul></li>
-				
-				<ul><li> A client session typically consists of multiple requests, which due to the stateless nature of HTTP, will appear to the application as being
-				“unrelated” to one another; the HttpSession object can be used to “relate” these requests together, but there may still be a need to share
-				information created in one request with a subsequent request</ul></li>
-				
-				<ul><li>Different web application components may require access to common resources or information (e.g. page counters, shared database
-				connection).</ul></li>
-				
-				<ul><li> Information sharing is accomplished by creating attribute objects and exposing these objects in the appropriate scope.</ul></li>
-				
-				<ul><li> Scopes:</ul></li>
-				
-					<p>Request scope (HttpServletRequest)
-					<p>Session scope (HttpSession)
-					<p>Web Application or Web Context scope (ServletContext)
-					<p>Page scope (local objects in a servlet)
-				<ul><li>Creating, accessing, and removing attribute objects</ul></li>
-					<p>setAttribute (String attrName, Object attrValue)
-					<p>getAttribute (String attrName)
-					<p>getAttributeNames()
-					<p>removeAttribute (String attrName)
+				<ul><li>encodeURL(String url), encodeRedirectURL(String url</ul></li><br></ul>
 	</ul>
-		
-    <hr>
-    <p></p>
+
+		<h2><b>PHP (Hypertext Preprocessor)</b></h2>
+		<p>PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used open source general-purpose scripting language that is especially suited for web development and can be embedded into HTML.</p>
+		<p>What distinguishes PHP from something like client-side JavaScript is that the code is executed on the server, generating HTML which is then sent to the client. The client would receive the results of running that script, but would not know what the underlying code was. You can even configure your web server to process all your HTML files with PHP, and then there's really no way that users can tell what you have up your sleeve.
+		</br></br>
+		The best things in using PHP are that it is extremely simple for a newcomer, but offers many advanced features for a professional programmer. Don't be afraid reading the long list of PHP's features. You can jump in, in a short time, and start writing simple scripts in a few hours. Below is an example of a PHP script from W3Schools and beside it is the result:</p>
+		<center><img src="styles/images/php1.png" width = "50%"></center>
+		<p><b>8 Data Types of PHP</b></br>
+		1. Integers − are whole numbers, without a decimal point, like 4195.
+			</br>
+		2. Doubles − are floating-point numbers, like 3.14159 or 49.1.
+			</br>
+		3. Booleans − have only two possible values either true or false.
+			</br>
+		4. NULL − is a special type that only has one value: NULL.
+			</br>
+		5. Strings − are sequences of characters, like 'PHP supports string operations.'
+			</br>
+		6. Arrays − are named and indexed collections of other values.
+			</br>
+		7. Objects − are instances of programmer-defined classes, which can package up both other kinds of values and functions that are specific to the class.
+			</br>
+		8. Resources − are special variables that hold references to resources external to PHP (such as database connections).
+		</br></br>
+		The first five are simple types, and the next two (arrays and objects) are compound - the compound types can package up other arbitrary values of arbitrary type, whereas the simple types cannot.</p>
+		<p><b>Identifying Browser and Platform</b></br>
+		PHP creates some useful environment variables that can be seen in the phpinfo.php page that was used to setup the PHP environment.
+		</br></br>
+		One of the environment variables set by PHP is HTTP_USER_AGENT which identifies the user's browser and operating system.
+		</br></br>
+		PHP provides a function getenv() to access the value of all the environment variables. The information contained in the HTTP_USER_AGENT environment variable can be used to create dynamic content appropriate to the browser.
+		</br></br>
+		Click <a href = "https://www.tutorialspoint.com/php/php_web_concepts.htm">here</a> to view the example demonstration on how you can identify a client browser and operating system.
+		</br></br>
+		<b>Two ways the browser client can send information to the web server.</b>
+		</br>
+		The <b>GET</b> Method
+		The <b>POST</b> Method
+		</br></br>
+		<b>GET Method</b>
+		</br>
+		The GET method sends the encoded user information appended to the page request. The page and the encoded information are separated by the ? character.
+		</br></br>
+		1. The GET method produces a long string that appears in your server logs, in the browser's Location: box.
+		</br></br>
+		2. The GET method is restricted to send upto 1024 characters only.
+		</br></br>
+		3. Never use GET method if you have password or other sensitive information to be sent to the server.
+		</br></br>
+		4. GET can't be used to send binary data, like images or word documents, to the server.
+		</br></br>
+		5. The data sent by GET method can be accessed using QUERY_STRING environment variable.
+		</br></br>
+		6. The PHP provides $_GET associative array to access all the sent information using GET method.
+		<center><img src="styles/images/php2.png" width = "60%"></center>
+		</br></br></p>
+
+		<p><b>POST Method</b>
+		</br>
+			The POST method transfers information via HTTP headers. The information is encoded as described in case of GET method and put into a header called QUERY_STRING.
+			</br></br>
+			1. The POST method does not have any restriction on data size to be sent.
+			</br></br>
+			2. The POST method can be used to send ASCII as well as binary data.
+			</br></br>
+			3. The data sent by POST method goes through HTTP header so security depends on HTTP protocol. By using Secure HTTP you can make sure that your information is secure.
+			</br></br>
+			4. The PHP provides $_POST associative array to access all the sent information using POST method.
+			<center><img src="styles/images/php3.png" width = "50%"></center>
+			<p>To learn more about PHP, click <a href = "https://www.tutorialspoint.com/php/index.htm">here!</a></p>
+			<h2><b>NODE JS</b></h2>
+			<p>Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. Node.js' package ecosystem, npm, is the largest ecosystem of open source libraries in the world.</p>
+			<p><b>What can Node.js do?</b>
+					</br></br>
+				1. Node.js can generate dynamic page content.
+					</br></br>
+				2. Node.js can create, open, read, write, delete, and close files on the server.
+					</br></br>
+				3. Node.js can collect form data.
+					</br></br>
+				4. Node.js can add, delete, modify data in your database
+			</p>
+
+		</p>
+
+
+
+ 		</p>
   </div>
+</div>
   <div class="bottomleft">
   </div>
 </div>
