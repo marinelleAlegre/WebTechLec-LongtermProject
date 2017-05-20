@@ -124,7 +124,7 @@ footer {
 
 
 body{
-    background-color: #dfbee5;
+    background-color: #F5F1DE;
     color: white;
 }
 
@@ -159,7 +159,7 @@ body, html {
 }
 
 .container{
-	background-color: #617b9b;
+	background-color: #A9A9A9;
 	margin-left: 120px;
 	margin-right: 120px;
 }
@@ -192,7 +192,7 @@ button.accordion.active:after {
 }
 
 button.accordion {
-    background-color: #323d54;
+    background-color: #D4D7FE;
     color: white;
     cursor: pointer;
     padding: 18px;
@@ -206,7 +206,7 @@ button.accordion {
 }
 
 button.accordion.active, button.accordion:hover {
-    background-color: #b1b5bc;
+    background-color: #cdd1fe;
 }
 
 div.panel {
@@ -221,15 +221,16 @@ div.panel {
 
 .TableRHF{
 	width:100%; 
-	border-collapse:collapse; 
+	border-collapse:collapse;
+    color: black; 
 }
 
 .TableRHF td{ 
-	padding:10px; border:#19191e 1px solid;
+	padding:10px; border:black 1px solid;
 }
 
 .TableRHF tr{
-	background: #4a4b56;
+	background: #F5FFFA;
 }
 	
 

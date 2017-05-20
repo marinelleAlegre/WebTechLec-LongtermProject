@@ -1,6 +1,6 @@
 #HOME {
 	font-size: 50px;
-	font-family: "Century Gothic";
+	font-family: "Sansation Light";
 	text-align: center;
 	filter: glow(color=red,strength=3);
 	padding-top: 5vh;
@@ -36,27 +36,27 @@
 }
 #LECTURE {
 	font-size: 50px;
-	font-family: "Century Gothic";
+	font-family: "Sansation Light";
 	filter: glow(color=red,strength=3);
 	padding-top: 5vh;
 }
 #GLOSSARY {
 	font-size: 50px;
-	font-family: "Century Gothic";
+	font-family: "Sansation Light";
 	filter: glow(color=red,strength=3);
 	padding-top: 5vh;
 	text-align: center;
 }
 #REFERENCES {
 	font-size: 50px;
-	font-family: "Century Gothic";
+	font-family: "Sansation Light";
 	filter: glow(color=red,strength=3);
 	padding-top: 5vh;
 	text-align: center;
 }
 #CONTACT {
 	font-size: 50px;
-	font-family: "Century Gothic";
+	font-family: "Sansation Light";
 	filter: glow(color=red,strength=3);
 	padding-top: 5vh;
 	text-align: center;
@@ -110,7 +110,7 @@
 }
 
 textarea {
-	font-family: "Calibri"aaa;
+	font-family: "Calibri";
     width: 100%;
     height: 150px;
     line-height: 150%;
